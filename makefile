@@ -9,4 +9,5 @@ $(SRC)*.c : $(HDR)*.h
 	gcc -c $(SRC)insertion_sort.c -o $(OBJ)insertion_sort.o
 	gcc -c $(SRC)selection_sort.c -o $(OBJ)selection_sort.o
 	gcc -c $(SRC)merge_sort.c -o $(OBJ)merge_sort.o
+	gcc -c $(SRC)shell_sort.c -o $(OBJ)shell_sort.o
 	
