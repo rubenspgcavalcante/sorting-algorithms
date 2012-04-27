@@ -1,1 +1,1 @@
-void insertionSort(int* L, int tam);
+void insertionSort(int*, int);
