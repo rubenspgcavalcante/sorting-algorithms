@@ -14,3 +14,4 @@ $(SRC)*.c : $(HDR)*.h
 	gcc -c $(SRC)counting_sort.c -o $(OBJ)counting_sort.o
 	gcc -c $(SRC)bucket_sort.c -o $(OBJ)bucket_sort.o
 	gcc -c $(SRC)radix_sort.c -o $(OBJ)radix_sort.o
+	gcc -c $(SRC)heap_sort.c -o $(OBJ)heap_sort.o
