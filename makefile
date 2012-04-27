@@ -11,3 +11,4 @@ $(SRC)*.c : $(HDR)*.h
 	gcc -c $(SRC)merge_sort.c -o $(OBJ)merge_sort.o
 	gcc -c $(SRC)shell_sort.c -o $(OBJ)shell_sort.o
 	gcc -c $(SRC)quick_sort.c -o $(OBJ)quick_sort.o
+	gcc -c $(SRC)counting_sort.c -o $(OBJ)counting_sort.o
