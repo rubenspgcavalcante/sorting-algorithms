@@ -2,6 +2,17 @@
 #define __RADIXSORT
 #include <stdlib.h>
 
+int maiorElemento(int *L, int tam){
+    int i, k=0,mov;
+    for(i=0; i<tam; i++){
+        if(L[i] > k){
+            k = L[i];
+            mov++;
+        }
+    }
+    return k;
+}
+
 void radixSort(int *L, int tam){
     int d = 10; //Número de algarismos dos decimais
     int i, j, k=maiorElemento(L,tam);
