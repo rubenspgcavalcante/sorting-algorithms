@@ -16,6 +16,10 @@ A group of sorting algorithms used in whole world
 * [Radix sort](http://en.wikipedia.org/wiki/Radix_sort)
 * [Heap sort](http://en.wikipedia.org/wiki/Heap_sort)
 
+##Compiling
+Just run *make* (or make all), to build a compiled version of the libraries. To build shared libraries (so), just run *make share*. To compile the source code, it required gcc.  
+The compiled version is in **object** directory, and the shared lib files are in **so** directory.
+
 ##Author
 
 Rubens Pinheiro Gonçalves Cavalcante  
@@ -27,5 +31,5 @@ Relating bugs and others issues [github](https://github.com/rubenspgcavalcante/s
 
 ##Licence and rights
 
-Utilizing GNU LESSER GENERAL PUBLIC LICENSE *Version 3, 29 June 2007*
-[gnu.org](http://www.gnu.org/copyleft/gpl.html,"GPLv3")  
+Utilizing GNU LESSER GENERAL PUBLIC LICENSE *Version 3, 29 June 2007*  
+[Online version](http://www.gnu.org/copyleft/gpl.html,"GPLv3")  
