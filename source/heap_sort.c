@@ -15,7 +15,7 @@ struct HBC* iniciaHeap(int t){
     q->ultima = 0;
     q->tamanho = t;
     return q;
-};
+}
 
 int insereHeap (struct HBC *H, int x) {
     int i;

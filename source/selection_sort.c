@@ -8,11 +8,11 @@ void selectionSort(int* L, int tam){
         for(j=i+1;j<tam;j++){
             if(L[j]<L[min]) min = j;
         }
-        //Swap--------
+        /*Swap--------*/
         bck = L[i];
         L[i] = L[min];
         L[min] = bck;
-        //------------
+        /*------------*/
     }
     return;
 }

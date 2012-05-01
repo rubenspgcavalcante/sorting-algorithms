@@ -1,9 +1,12 @@
 #ifndef __QUICKSORT
 #define __QUICKSORT
+#include <stdlib.h>
+#include <time.h>
 
 int particao(int *L, int inicio, int fim, int opt) {
     int pivo,i,j,aux;
     if(opt==0){
+        srand(time(NULL));
         pivo = rand()%(fim-inicio) + inicio;
         aux = L[pivo];
         L[pivo] = L[inicio];

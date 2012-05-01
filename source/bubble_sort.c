@@ -10,11 +10,11 @@ void bubbleSort(int* L, int tam){
         flag = 0;
         for(j=0;j<tam-i;j++){
             if(L[j]>L[j+1]){
-                //Swap-------------
+                /*Swap-------------*/
                     bck = L[j];
                     L[j] = L[j+1];
                     L[j+1] = bck;
-                //-----------------
+                /*-----------------*/
                 flag = 1;
             }
         }
