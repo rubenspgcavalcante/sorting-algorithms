@@ -18,6 +18,6 @@ all: $(OBJ) $(SOBJ)
 %.so: $(SRCS)
 	gcc $(CSHAREFLAGS)$@.1 -o $@ $<
 
-clean:git
+clean:
 	rm -f objects/*.o
 	rm -f so/*.so
