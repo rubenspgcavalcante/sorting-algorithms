@@ -1,23 +1,18 @@
-SRCDIR = source
-SRC = $(SRCDIR)/*.c
-SRCS = $(wildcard $(SRC))
-OBJREF = $(SRCS:.c=.o)
-OBJ = $(subst source, objects, $(OBJREF))
-
-SOBJREF = $(SRCS:.c=.so)
-SOBJ = $(subst source, so, $(SOBJREF))
+C_FILES := $(wildcard source/*.c)
+OBJ_FILES := $(addprefix objects/,$(notdir $(C_FILES:.c=.o)))
+SO_FILES := $(addprefix so/,$(notdir $(C_FILES:.c=.so)))
 
 CFLAGS = -c -ansi -pedantic -fPIC -Wall -std=c99
-CSHAREFLAGS = -shared -Wl,-soname,
+CSHAREFLAGS = -fPIC -shared -Wl,-soname,
 
-all: $(OBJ) $(SOBJ)
+all: $(OBJ_FILES) $(SO_FILES)
 	
-%.o: $(SRCS)
-	gcc $(CFLAGS) $< -o $@
+objects/%.o: source/%.c
+	gcc $(CFLAGS) -o $@ $<
 
-%.so: $(SRCS)
+so/%.so: source/%.c
 	gcc $(CSHAREFLAGS)$@.1 -o $@ $<
 
-clean:git
+clean:
 	rm -f objects/*.o
 	rm -f so/*.so
